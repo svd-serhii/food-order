@@ -1,7 +1,11 @@
+import Header from "./components/Header";
+import Meals from "./components/Meals";
+
 function App() {
 	return (
 		<>
-			<h1>You got this 💪</h1>
+      <Header />
+      <Meals/>
 		</>
 	);
 }
