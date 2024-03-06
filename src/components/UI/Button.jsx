@@ -1,7 +1,7 @@
 import React from "react";
 
 const Button = ({ children, textOnly, className, ...props }) => {
-	const cssClass = textOnly ? "text-button" : "button";
+	let cssClass = textOnly ? "text-button" : "button";
 	cssClass += " " + className;
 
 	return (
