@@ -14,8 +14,8 @@ async function sendHttpRequest(url, config) {
 	return resData;
 }
 
-function useHttp(url, config) {
-	const [data, setData] = useState();
+function useHttp(url, config, initialData) {
+	const [data, setData] = useState(initialData);
 	const [error, setError] = useState();
 	const [isLoading, setIsLoading] = useState(false);
 
@@ -34,7 +34,7 @@ function useHttp(url, config) {
 	);
 
 	useEffect(() => {
-		if (config && config.method === "GET") {
+		if ((config && (config.method === "GET" || !config.method)) || !config) {
 			sendRequest();
 		}
 	}, [sendRequest, config]);
