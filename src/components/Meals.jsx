@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import MealItem from "./MealItem";
 import useHttp from "../hooks/useHttp";
 
-const requestConfig = {};
+const requestConfig = {}; // empty {} - is a fix of infinite loop with GET request on backend.  
 
 const Meals = () => {
 	const {
